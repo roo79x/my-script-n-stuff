@@ -57,20 +57,20 @@ echo
 
 echo "${txtbld} ${txtblu} Now we will install some extra PPAs ${txtrst}"
 
-#read -p "${txtbld} ${txtblu} Add Kubuntu Backports PPA? (Y/N) ${txtrst}" -n 1 -r
-#echo    # (optional) move to a new line
-#if [[ $REPLY =~ ^[Yy]$ ]]
-#then
-#   sudo add-apt-repository ppa:kubuntu-ppa/backports
-#fi
+read -p "${txtbld} ${txtblu} Add Kubuntu Backports PPA? (Y/N) ${txtrst}" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   sudo add-apt-repository ppa:kubuntu-ppa/backports
+fi
 
-#read -p "${txtbld} ${txtblu} Add LibreOffice PPA? (Y/N) (most current version of 
-#Libreoffice) ${txtrst}" -n 1 -r
-#echo    # (optional) move to a new line
-#if [[ $REPLY =~ ^[Yy]$ ]]
-#then
-#   sudo add-apt-repository ppa:libreoffice/ppa
-#fi
+read -p "${txtbld} ${txtblu} Add LibreOffice PPA? (Y/N) (most current version of 
+Libreoffice) ${txtrst}" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   sudo add-apt-repository ppa:libreoffice/ppa
+fi
 
 read -p "${txtbld} ${txtblu} Add NoMacs Image Viewer PPA? (Y/N) ${txtrst}" -n 1 
 -r
@@ -88,12 +88,12 @@ then
    sudo add-apt-repository ppa:rvm/smplayer
 fi
 
-#read -p "${txtbld} ${txtblu} Add FFMPEG 3 PPA? ${txtrst}" -n 1 -r
-#echo    # (optional) move to a new line
-#if [[ $REPLY =~ ^[Yy]$ ]]
-#then
-#   sudo add-apt-repository -y ppa:jonathonf/ffmpeg-3
-#fi
+read -p "${txtbld} ${txtblu} Add FFMPEG 3 PPA? ${txtrst}" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   sudo add-apt-repository -y ppa:jonathonf/ffmpeg-3
+fi
 
 echo "${txtbld} ${txtcyn} Do an update to add the new PPA's ${txtrst}"
 sudo apt-get -y update && sudo apt-get upgrade
@@ -127,7 +127,7 @@ then
 
 else
     echo "${txtbld} ${txtgrn} Downloading and installing NeroAac ${txtrst}"
-	cd /tmp
+    cd /tmp
     wget http://ftp6.nero.com/tools/NeroAACCodec-1.5.1.zip
     unzip -j NeroAACCodec-1.5.1.zip linux/neroAac*
     sudo install -m 0755 neroAacEnc /usr/bin/
@@ -138,8 +138,7 @@ else
 fi
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
-sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge 
-realpath hunspell-en-au
+sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Media Codecs Without Flash 
@@ -149,7 +148,7 @@ echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications 
 (--no-install-recommends)${txtrst}"
-sudo apt --no-install-recommends install smtube synaptic
+sudo apt --no-install-recommends install synaptic
 echo "   "
 
 echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and 
