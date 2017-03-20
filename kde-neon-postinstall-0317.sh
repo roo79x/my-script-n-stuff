@@ -1,9 +1,9 @@
 #!/bin/bash
 #Title: Post install script for KDE-Neon
-#Description: Installs patent encumbered audio and video codecs WITHOUT FLASH!!
+#Description: Installs patent encumbered audio and video codecs WITHOUT FLASH!!and other stuff
 #Author: Roo79x
 #Date: 20 March 2017
-#Usage: bash kubuntu16.10-postinstall-coop-150317.sh
+#Usage: bash kde-neon-postinstall-0317.sh
 ## Some parts of this script are copied from Quidsup's flashless-extras.sh 
 script found at https://github.com/quidsup/flashless-extras
 ##############################
@@ -40,12 +40,10 @@ user="${SUDO_USER:-$USER}"
 
 #Post Install
 echo "${txtbld} ${txtmag} "${greet}" "${user}" ${txtrst}"
-echo "${txtbld} ${txtblu} ${txtsmul}Running Kubuntu Post Install 
-Script${txtrmul} ${txtrst}"
+echo "${txtbld} ${txtblu} ${txtsmul}Running Kubuntu Post Install Script${txtrmul} ${txtrst}"
 echo "  "
 
-sudo -p "${txtbld} ${txtgrn} Please enter your password: ${txtrst}" whoami 
-1>/dev/null
+sudo -p "${txtbld} ${txtgrn} Please enter your password: ${txtrst}" whoami 1>/dev/null
 
 echo "Updating repositories"
 sudo apt update
@@ -64,8 +62,7 @@ then
    sudo add-apt-repository ppa:kubuntu-ppa/backports
 fi
 
-read -p "${txtbld} ${txtblu} Add LibreOffice PPA? (Y/N) (most current version of 
-Libreoffice) ${txtrst}" -n 1 -r
+read -p "${txtbld} ${txtblu} Add LibreOffice PPA? (Y/N) (most current version of Libreoffice) ${txtrst}" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -80,8 +77,7 @@ then
    sudo add-apt-repository -y ppa:nomacs/stable
 fi
 
-read -p "${txtbld} ${txtblu} Add SMPlayer PPA? (Y/N) (For SMTube Youtube 
-Downloader and SMplayer MPV Frontend) ${txtrst}" -n 1 -r
+read -p "${txtbld} ${txtblu} Add SMPlayer PPA? (Y/N) (For SMTube Youtube Downloader and SMplayer MPV Frontend) ${txtrst}" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -109,8 +105,7 @@ then
     echo "${txtbld} ${txtgrn} Found youtube-dl ${txtrst}"
 	sudo youtube-dl -U
 else
-    echo "${txtbld} ${txtgrn} Not Found so downloading and installing youtube-dl 
-${txtrst}"
+    echo "${txtbld} ${txtgrn} Not Found so downloading and installing youtube-dl ${txtrst}"
 	sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O 
 /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
@@ -141,24 +136,20 @@ echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
 sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au
 echo "   "
 
-echo "${txtbld} ${txtylw} Install Some Extra Media Codecs Without Flash 
-${txtrst}"
+echo "${txtbld} ${txtylw} Install Some Extra Media Codecs Without Flash ${txtrst}"
 sudo apt install lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac vlc vlc-plugin-samba
 echo "   "
 
-echo "${txtbld} ${txtylw} Install Some Extra Applications 
-(--no-install-recommends)${txtrst}"
+echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
 sudo apt --no-install-recommends install synaptic
 echo "   "
 
-echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and 
-Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"
+echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"
 sleep 2s
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo 
-apt-get autoclean && sudo apt-get autoremove --purge
+sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove --purge
 
 #Finished
 echo "    "
 echo "${txtbld} ${txtred} END OF LINE... ${txtrst}"
-sleep 2s
+sleep 1s
 echo "   "
