@@ -191,8 +191,8 @@ echo "   "
 echo "${txtbld} ${txtgrn} Adding Some Extra Eye Candy ${txtrst}"
 mkdir ~/temp/Wallpapers
 mkdir ~/temp/userpix
-#wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
-#wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
+wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
+wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
 tar xzvf ~/temp/Wallpapers.tar.gz -C ~/temp/Wallpapers
 tar xzvf ~/temp/userpix.tar.gz -C ~/temp/userpix
 sudo mv -f ~/temp/Wallpapers/ /usr/share/wallpapers/
@@ -210,10 +210,10 @@ echo "${txtbld} ${txtgrn} Feeding the Sharks ${txtrst}"
 cd
 #sudo mv /usr/lib/vlc/plugins/control/libdbus_plugin.so /usr/lib/vlc/plugins/control/libdbus_plugin.so.backup
 #gsettings set com.canonical.indicator.sound interested-media-players "['yarock.desktop']"
-#mv ~/Videos ~/Movies
-#sed -i 's/Videos/Movies/g' ~/.config/user-dirs.dirs
-#cp ~/.bashrc ~/.bashrc.old
-#sudo xdg-user-dirs-update
+mv ~/Videos ~/Movies
+sed -i 's/Videos/Movies/g' ~/.config/user-dirs.dirs
+cp ~/.bashrc ~/.bashrc.old
+sudo xdg-user-dirs-update
 #sleep 2s
 
 echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"
@@ -225,6 +225,3 @@ echo "    "
 echo "${txtbld} ${txtred} END OF LINE... ${txtrst}"
 sleep 1s
 echo "   "
-
-
-
