@@ -3,7 +3,7 @@
 #Description: Installs patent encumbered audio and video codecs WITHOUT FLASH!!and other stuff
 #Author: Roo79x
 #Date: 20 March 2017
-#Usage: bash kde-neon-postinstall-0317.sh
+#Usage: bash kde-neon-postinstall-0417.sh
 ## Some parts of this script are copied from Quidsup's flashless-extras.sh
 #script found at https://github.com/quidsup/flashless-extras
 ##############################
@@ -137,14 +137,11 @@ else
 fi
 
 #to install ffmulticonverter
-echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
-wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
-
-tar -xvzf ffmulticonverter-1.8.0.tar.gz
-
-cd ffmulticonverter-1.8.0/
-
-sudo python3 setup.py install
+#echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
+#wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
+#tar -xvzf ffmulticonverter-1.8.0.tar.gz
+#cd ffmulticonverter-1.8.0/
+#sudo python3 setup.py install
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
 sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt
