@@ -65,5 +65,5 @@ OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action EmptyTrash]
 Name=Empty Trash
-Exec=/home/roo79x/.scripts/my01delete-trash-script.sh
+Exec=/usr/local/bin/delete-trash
 OnlyShowIn=Unity;XFCE;KDE;
