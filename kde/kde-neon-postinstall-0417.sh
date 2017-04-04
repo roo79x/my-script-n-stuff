@@ -182,8 +182,8 @@ echo "    "
 
 echo "${txtbld} ${txtgrn} Adding Some Custom Scripts ${txtrst}"
 mkdir ~/.bin
-wget https://www.dropbox.com/s/el4sbhhw610sv09/my01delete-trash-script.sh -O ~/.bin/delete-trash
-sudo chmod a+rx ~/.bin/delete-trash
+sudo wget https://www.dropbox.com/s/el4sbhhw610sv09/my01delete-trash-script.sh -O /usr/local/bin/delete-trash
+sudo chmod a+rx /usr/local/bin/delete-trash
 sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/upgcln.sh -O /usr/local/bin/upgcln
 sudo chmod a+rx /usr/local/bin/upgcln
 echo "   "
