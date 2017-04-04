@@ -161,22 +161,22 @@ sleep 1s
 echo "  "
 
 echo "${txtbld} ${txtblu} Modding Chromium browser ${txtrst}"
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/chromium-browser.desktop -O /usr/share/applications/chromium-browser.desktop
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/chromium-browser.desktop -O /usr/share/applications/chromium-browser.desktop
 sudo chmod a+rx /usr/share/applications/chromium-browser.desktop
 echo "    "
 
 echo "${txtbld} ${txtblu} Modding Dolphin ${txtrst}"
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.dolphin.desktop -O /usr/share/applications/org.kde.dolphin.desktop
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.dolphin.desktop -O /usr/share/applications/org.kde.dolphin.desktop
 sudo chmod a+rx /usr/share/applications/org.kde.dolphin.desktop
 echo "    "
 
 echo "${txtbld} ${txtblu} Modding Kate ${txtrst}"
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.kate.desktop -O /usr/share/applications/org.kde.kate.desktop
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.kate.desktop -O /usr/share/applications/org.kde.kate.desktop
 sudo chmod a+rx /usr/share/applications/org.kde.kate.desktop
 echo "    "
 
 echo "${txtbld} ${txtblu} Modding Konsole ${txtrst}"
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.konsole.desktop -O /usr/share/applications/org.kde.konsole.desktop
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.konsole.desktop -O /usr/share/applications/org.kde.konsole.desktop
 sudo chmod a+rx /usr/share/applications/org.kde.konsole.desktop
 echo "    "
 
@@ -184,17 +184,19 @@ echo "${txtbld} ${txtgrn} Adding Some Custom Scripts ${txtrst}"
 mkdir ~/.bin
 wget https://www.dropbox.com/s/el4sbhhw610sv09/my01delete-trash-script.sh -O ~/.bin/delete-trash
 sudo chmod a+rx ~/.bin/delete-trash
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/upgcln.sh -O /usr/local/bin/upgcln
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/upgcln.sh -O /usr/local/bin/upgcln
 sudo chmod a+rx /usr/local/bin/upgcln
 echo "   "
 
 echo "${txtbld} ${txtgrn} Adding Some Extra Eye Candy ${txtrst}"
-wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
-wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
-tar xzvf ~/temp/Wallpapers.tar.gz 
-tar xzvf ~/temp/userpix.tar.gz
-sudo mv -f ~/temp/Wallpapers /usr/share/wallpapers/
-sudo mv -f ~/temp/userpix /usr/share/user-manager/avatars/userpix
+mkdir ~/temp/Wallpapers
+mkdir ~/temp/userpix
+#wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
+#wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
+tar xzvf ~/temp/Wallpapers.tar.gz -C ~/temp/Wallpapers
+tar xzvf ~/temp/userpix.tar.gz -C ~/temp/userpix
+sudo mv -f ~/temp/Wallpapers/ /usr/share/wallpapers/
+sudo mv -f ~/temp/userpix/ /usr/share/user-manager/avatars/userpix/
 echo " "
 sleep 1s
 
