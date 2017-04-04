@@ -201,6 +201,7 @@ echo " "
 sleep 1s
 
 echo "${txtbld} ${txtgrn} Training Some Dragons ${txtrst}"
+wget https://gist.githubusercontent.com/d0od88/e59f38549d0b990d6fdd2d6d569cd25c/raw/dd4ec483938b4dd50f306c6321984c02935977fc/lattedockinstallation.sh  -O ~/Public/lattedockinstallation.sh
 wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/useful-stuff.sh -O ~/Public/useful-stuff.sh
 wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/kde-neon-postinstall-0417.sh -O ~/Public/kde-neon-postinstall-0417.sh
 echo "   "
