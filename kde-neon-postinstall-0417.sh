@@ -49,11 +49,32 @@ echo "${txtbld} ${txtcyn} "Updating repositories" ${txtrst}"
 sudo apt update
 echo 
 
-# echo "${txtbld} ${txtylw} Removing Unwanted Applications ${txtrst}"
-# sudo apt-get autoremove --purge #kwrite #gwenview
-# echo "   "
+echo "${txtbld} ${txtylw} Removing Unwanted Applications ${txtrst}"
+sudo apt-get autoremove --purge kwrite #gwenview
+echo "   "
 
 echo "${txtbld} ${txtblu} Now we will install some extra PPAs ${txtrst}"
+
+read -p "${txtbld} ${txtblu} Add NoMacs Image Viewer PPA? (Y/N) ${txtrst}" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   sudo add-apt-repository -y ppa:nomacs/stable
+fi
+
+read -p "${txtbld} ${txtblu} Add Roo79x's Personal PPA? (Y/N) ${txtrst}" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   sudo add-apt-repository -y ppa:roo79x/my-kde
+fi
+
+read -p "${txtbld} ${txtblu} Add FFMPEG 3 PPA? ${txtrst}" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+   sudo add-apt-repository -y ppa:jonathonf/ffmpeg-3
+fi
 
 #read -p "${txtbld} ${txtblu} Add Kubuntu Backports PPA? (Y/N) ${txtrst}" -n 1 -r
 #echo    # (optional) move to a new line
@@ -69,31 +90,15 @@ echo "${txtbld} ${txtblu} Now we will install some extra PPAs ${txtrst}"
 #   sudo add-apt-repository ppa:libreoffice/ppa
 #fi
 
-read -p "${txtbld} ${txtblu} Add NoMacs Image Viewer PPA? (Y/N) ${txtrst}" -n 1 
--r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-   sudo add-apt-repository -y ppa:nomacs/stable
-fi
-
-read -p "${txtbld} ${txtblu} Add SMPlayer PPA? (Y/N) (For SMTube Youtube Downloader and SMplayer MPV Frontend) ${txtrst}" -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-   sudo add-apt-repository ppa:rvm/smplayer
-fi
-
-read -p "${txtbld} ${txtblu} Add FFMPEG 3 PPA? ${txtrst}" -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-   sudo add-apt-repository -y ppa:jonathonf/ffmpeg-3
-fi
+#read -p "${txtbld} ${txtblu} Add SMPlayer PPA? (Y/N) (For SMTube Youtube Downloader and SMplayer MPV Frontend) ${txtrst}" -n 1 -r
+#echo    # (optional) move to a new line
+#if [[ $REPLY =~ ^[Yy]$ ]]
+#then
+#   sudo add-apt-repository ppa:rvm/smplayer
+#fi
 
 echo "${txtbld} ${txtcyn} Do an update to add the new PPA's ${txtrst}"
 sudo apt-get -y update && sudo apt-get upgrade
-
 echo "  "
 
 #yt-dl
@@ -131,12 +136,22 @@ else
     sleep 1s
 fi
 
+#to install ffmulticonverter
+echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
+wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
+
+tar -xvzf ffmulticonverter-1.8.0.tar.gz
+
+cd ffmulticonverter-1.8.0/
+
+sudo python3 setup.py install
+
 echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
-sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au
+sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Media Codecs Without Flash ${txtrst}"
-sudo apt install lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac vlc vlc-plugin-samba
+sudo apt install lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac vlc vlc-plugin-samba libvlc5 libphonon4qt5-4 chromium-codecs-ffmpeg-extra
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
