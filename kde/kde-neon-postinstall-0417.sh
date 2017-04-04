@@ -148,12 +148,71 @@ sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge 
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Media Codecs Without Flash ${txtrst}"
-sudo apt install lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac vlc vlc-plugin-samba libvlc5 libphonon4qt5-4 chromium-codecs-ffmpeg-extra
+sudo apt install lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac vlc vlc-nox vlc-plugin-samba libvlc5 libphonon4qt5-4 chromium-codecs-ffmpeg-extra
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
 sudo apt --no-install-recommends install synaptic
 echo "   "
+
+echo "${txtbld} ${txtblu} Modding File Manager & Dock!!!............. ${txtrst}"
+mkdir ~/temp
+sleep 1s
+echo "  "
+
+echo "${txtbld} ${txtblu} Modding Chromium browser ${txtrst}"
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/chromium-browser.desktop -O /usr/share/applications/chromium-browser.desktop
+sudo chmod a+rx /usr/share/applications/chromium-browser.desktop
+echo "    "
+
+echo "${txtbld} ${txtblu} Modding Dolphin ${txtrst}"
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.dolphin.desktop -O /usr/share/applications/org.kde.dolphin.desktop
+sudo chmod a+rx /usr/share/applications/org.kde.dolphin.desktop
+echo "    "
+
+echo "${txtbld} ${txtblu} Modding Kate ${txtrst}"
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.kate.desktop -O /usr/share/applications/org.kde.kate.desktop
+sudo chmod a+rx /usr/share/applications/org.kde.kate.desktop
+echo "    "
+
+echo "${txtbld} ${txtblu} Modding Konsole ${txtrst}"
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.konsole.desktop -O /usr/share/applications/org.kde.konsole.desktop
+sudo chmod a+rx /usr/share/applications/org.kde.konsole.desktop
+echo "    "
+
+echo "${txtbld} ${txtgrn} Adding Some Custom Scripts ${txtrst}"
+mkdir ~/.bin
+wget https://www.dropbox.com/s/el4sbhhw610sv09/my01delete-trash-script.sh -O ~/.bin/delete-trash
+sudo chmod a+rx ~/.bin/delete-trash
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/upgcln.sh -O /usr/local/bin/upgcln
+sudo chmod a+rx /usr/local/bin/upgcln
+echo "   "
+
+echo "${txtbld} ${txtgrn} Adding Some Extra Eye Candy ${txtrst}"
+wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
+wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
+tar xzvf ~/temp/Wallpapers.tar.gz 
+tar xzvf ~/temp/userpix.tar.gz
+sudo mv -f ~/temp/Wallpapers /usr/share/wallpapers/
+sudo mv -f ~/temp/userpix /usr/share/user-manager/avatars/userpix
+echo " "
+sleep 1s
+
+echo "${txtbld} ${txtgrn} Training Some Dragons ${txtrst}"
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/useful-stuff.sh -O ~/Public/useful-stuff.sh
+wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/kde-neon-postinstall-0417.sh -O ~/Public/kde-neon-postinstall-0417.sh
+echo "   "
+
+echo "${txtbld} ${txtgrn} Feeding the Sharks ${txtrst}"
+#wget 
+cd
+#sudo mv /usr/lib/vlc/plugins/control/libdbus_plugin.so /usr/lib/vlc/plugins/control/libdbus_plugin.so.backup
+#gsettings set com.canonical.indicator.sound interested-media-players "['yarock.desktop']"
+#mv ~/Videos ~/Movies
+#sed -i 's/Videos/Movies/g' ~/.config/user-dirs.dirs
+#cp ~/.bashrc ~/.bashrc.old
+#sudo xdg-user-dirs-update
+#sleep 2s
 
 echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"
 sleep 2s
@@ -164,3 +223,6 @@ echo "    "
 echo "${txtbld} ${txtred} END OF LINE... ${txtrst}"
 sleep 1s
 echo "   "
+
+
+
