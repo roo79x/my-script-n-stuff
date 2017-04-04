@@ -2,7 +2,7 @@
 #Title: Post install script for KDE-Neon
 #Description: Installs patent encumbered audio and video codecs WITHOUT FLASH!!and other stuff
 #Author: Roo79x
-#Date: 20 March 2017
+#Date: 04 April 2017
 #Usage: bash kde-neon-postinstall-0417.sh
 ## Some parts of this script are copied from Quidsup's flashless-extras.sh
 #script found at https://github.com/quidsup/flashless-extras
