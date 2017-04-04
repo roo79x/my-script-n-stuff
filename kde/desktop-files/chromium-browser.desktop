@@ -1,0 +1,58 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=Chromium Web Browser
+GenericName=Web Browser
+Comment=Access the Internet
+Comment[en_AU]=Access the Internet
+Comment[en_GB]=Access the Internet
+Exec=chromium-browser %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=chromium-browser
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupNotify=true
+X-AppInstall-Package=chromium-browser
+Actions=NewWindow;NewIncognito;OpenGoogle;OpenGmail;Compose;Contacts;Calendar;
+
+[Desktop Action NewWindow]
+Name=New Window
+Exec=chromium-browser %U
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action NewIncognito]
+Name=New Incognito Window
+Exec=chromium-browser --incognito
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action OpenGoogle]
+Name=Search Google
+Exec=chromium-browser http://google.com.au
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action OpenGmail]
+Name=Open Gmail
+Exec=chromium-browser http://gmail.com
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Compose]
+Name=Compose New Message
+Exec=chromium-browser https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Contacts]
+Name=Contacts
+Exec=chromium-browser http://www.google.com/contacts
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Calendar]
+Name=Calendar
+Exec=chromium-browser http://calendar.google.com
+OnlyShowIn=Unity;XFCE;KDE;
+
+#[Desktop Action Plex]
+#Name=Open Plex
+#Exec=chromium-browser http://#
+#OnlyShowIn=Unity;XFCE;KDE;

@@ -1,0 +1,69 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Dolphin
+Exec=dolphin %u
+Icon=system-file-manager
+Type=Application
+X-DocPath=dolphin/index.html
+Categories=Qt;KDE;System;FileTools;FileManager;
+GenericName=File Manager
+Terminal=false
+MimeType=inode/directory;
+InitialPreference=10
+X-DBUS-ServiceName=org.kde.dolphin
+Actions=Window;NewTab;Root;Downloads;Pictures;Music;Movies;Public;Disk1;OpenTrash;EmptyTrash;
+
+[Desktop Action Window]
+Name=Open a New Window
+Exec=dolphin
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action NewTab]
+Name=Open a New Tab
+Exec=dolphin --new-tab
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Root]
+Name=Open As Root
+Exec=kdesudo dolphin
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Downloads]
+Name=Downloads
+Exec=dolphin Downloads/
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Pictures]
+Name=Pictures
+Exec=dolphin Pictures/
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Music]
+Name=Music
+Exec=dolphin Music/
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Movies]
+Name=Movies
+Exec=dolphin Movies/
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Public]
+Name=Public
+Exec=dolphin Public/
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action Disk1]
+Name=Open Disk 1
+Exec=dolphin /media/roo79x/mstr4tb1/
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action OpenTrash]
+Name=Open Trash
+Exec=dolphin trash:///
+OnlyShowIn=Unity;XFCE;KDE;
+
+[Desktop Action EmptyTrash]
+Name=Empty Trash
+Exec=/home/roo79x/.scripts/my01delete-trash-script.sh
+OnlyShowIn=Unity;XFCE;KDE;
