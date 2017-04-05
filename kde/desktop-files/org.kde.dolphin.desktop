@@ -65,5 +65,5 @@ OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action EmptyTrash]
 Name=Empty Trash
-Exec=/usr/local/bin/delete-trash
+Exec=delete-trash
 OnlyShowIn=Unity;XFCE;KDE;
