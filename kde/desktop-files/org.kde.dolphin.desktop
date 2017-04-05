@@ -25,7 +25,7 @@ OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action Root]
 Name=Open As Root
-Exec=kdesudo dolphin
+Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dolphin
 OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action Downloads]
@@ -65,5 +65,5 @@ OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action EmptyTrash]
 Name=Empty Trash
-Exec=/home/roo79x/.bin/delete-trash
+Exec=/usr/local/bin/delete-trash
 OnlyShowIn=Unity;XFCE;KDE;

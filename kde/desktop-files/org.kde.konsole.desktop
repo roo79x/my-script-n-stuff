@@ -28,5 +28,5 @@ OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action Root]
 Name=Open root terminal
-Exec=kdesudo konsole
+Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY konsole
 OnlyShowIn=Unity;XFCE;KDE;

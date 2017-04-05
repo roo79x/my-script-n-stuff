@@ -19,7 +19,7 @@ Actions=Root;NewTab;NewWindow;
 
 [Desktop Action Root]
 Name=Open kate as root
-Exec=kdesudo kate
+Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY kate
 
 [Desktop Action NewTab]
 Name=Open a New Tab
