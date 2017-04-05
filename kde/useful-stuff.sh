@@ -201,7 +201,7 @@ sudo -p "${txtbld} ${txtgrn} Please enter your password: ${txtrst}" whoami 1>/de
 #####################roo-urls######################
 
 ##Github
-
+https://github.com/roo79x/my-script-n-stuff
 
 # launchpad.net
 https://launchpad.net/~roo79x/
