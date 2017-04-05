@@ -137,7 +137,14 @@ else
     sleep 1s
 fi
 
-#to install ffmulticonverter
+echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
+sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt kdesudo lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0 libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac chromium-codecs-ffmpeg-extra ffmpegthumbs libvlc5 phonon4qt5-backend-vlc phonon-backend-vlc vlc vlc-nox vlc-plugin-samba libvlc5 libphonon4qt5-4 python3-pyqt5 intel-microcode
+echo "   "
+
+echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
+sudo apt --no-install-recommends install synaptic
+echo "   "
+
 echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
 wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
 tar -xvzf ffmulticonverter-1.8.0.tar.gz
@@ -145,14 +152,6 @@ cd ffmulticonverter-1.8.0/
 sudo python3 setup.py install
 cd
 sudo rm -rf ffmulticonverter-1.8.0/
-echo "   "
-
-echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
-sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt kdesudo lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0 libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac chromium-codecs-ffmpeg-extra ffmpegthumbs libvlc5 phonon4qt5-backend-vlc phonon-backend-vlc vlc vlc-nox vlc-plugin-samba libvlc5 libphonon4qt5-4 python3-pyqt5 intel-microcode
-echo "   "
-
-echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
-sudo apt --no-install-recommends install synaptic
 echo "   "
 
 echo "${txtbld} ${txtblu} Modding File Manager & Dock!!!............. ${txtrst}"
