@@ -48,6 +48,25 @@ echo "${txtbld} ${txtund} ${txtgrn} Doing an Update, Upgrade and Cleanup... ${tx
 sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoclean && sudo apt-get -y autoremove --purge
 echo "   "
 
+echo "${txtbld} ${txtblu} Modding Chromium browser ${txtrst}"
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/chromium-browser.desktop -O /usr/share/applications/chromium-browser.desktop
+sudo chmod a+rx /usr/share/applications/chromium-browser.desktop
+echo "    "
+
+echo "${txtbld} ${txtblu} Modding Dolphin ${txtrst}"
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.dolphin.desktop -O /usr/share/applications/org.kde.dolphin.desktop
+sudo chmod a+rx /usr/share/applications/org.kde.dolphin.desktop
+echo "    "
+
+echo "${txtbld} ${txtblu} Modding Kate ${txtrst}"
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.kate.desktop -O /usr/share/applications/org.kde.kate.desktop
+sudo chmod a+rx /usr/share/applications/org.kde.kate.desktop
+echo "    "
+
+echo "${txtbld} ${txtblu} Modding Konsole ${txtrst}"
+sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.konsole.desktop -O /usr/share/applications/org.kde.konsole.desktop
+sudo chmod a+rx /usr/share/applications/org.kde.konsole.desktop
+echo "    "
 
 #Finished
 echo "    "

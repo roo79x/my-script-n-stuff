@@ -195,7 +195,7 @@ sudo -p "${txtbld} ${txtgrn} Please enter your password: ${txtrst}" whoami 1>/de
 #######################end bash template##################
 
 
-
+#alias pkexec='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY'
 
 
 #####################roo-urls######################

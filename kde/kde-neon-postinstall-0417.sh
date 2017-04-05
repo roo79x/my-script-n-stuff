@@ -50,7 +50,8 @@ sudo apt update
 echo 
 
 echo "${txtbld} ${txtylw} Removing Unwanted Applications ${txtrst}"
-sudo apt-get autoremove --purge kwrite #gwenview
+sudo apt-get autoremove --purge kwrite gwenview
+sleep 1s
 echo "   "
 
 echo "${txtbld} ${txtblu} Now we will install some extra PPAs ${txtrst}"
@@ -62,7 +63,7 @@ then
    sudo add-apt-repository -y ppa:nomacs/stable
 fi
 
-read -p "${txtbld} ${txtblu} Add Roo79x's Personal PPA? (Y/N) ${txtrst}" -n 1 -r
+read -p "${txtbld} ${txtblu} Add Ray's Personal PPA? (Y/N) ${txtrst}" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
@@ -137,18 +138,17 @@ else
 fi
 
 #to install ffmulticonverter
-#echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
-#wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
-#tar -xvzf ffmulticonverter-1.8.0.tar.gz
-#cd ffmulticonverter-1.8.0/
-#sudo python3 setup.py install
-
-echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
-sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt
+echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
+wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
+tar -xvzf ffmulticonverter-1.8.0.tar.gz
+cd ffmulticonverter-1.8.0/
+sudo python3 setup.py install
+cd
+sudo rm -rf ffmulticonverter-1.8.0/
 echo "   "
 
-echo "${txtbld} ${txtylw} Install Some Extra Media Codecs Without Flash ${txtrst}"
-sudo apt install lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac vlc vlc-nox vlc-plugin-samba libvlc5 libphonon4qt5-4 chromium-codecs-ffmpeg-extra
+echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
+sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt kdesudo lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0 libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac chromium-codecs-ffmpeg-extra ffmpegthumbs libvlc5 phonon4qt5-backend-vlc phonon-backend-vlc vlc vlc-nox vlc-plugin-samba libvlc5 libphonon4qt5-4 python3-pyqt5
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
@@ -207,17 +207,15 @@ wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/kde-n
 echo "   "
 
 echo "${txtbld} ${txtgrn} Feeding the Sharks ${txtrst}"
-#wget 
 cd
-#sudo mv /usr/lib/vlc/plugins/control/libdbus_plugin.so /usr/lib/vlc/plugins/control/libdbus_plugin.so.backup
-#gsettings set com.canonical.indicator.sound interested-media-players "['yarock.desktop']"
 mv ~/Videos ~/Movies
 sed -i 's/Videos/Movies/g' ~/.config/user-dirs.dirs
 cp ~/.bashrc ~/.bashrc.old
 sudo xdg-user-dirs-update
-#sleep 2s
+echo 'alias pkexec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY' >> ~/.bashrc
 
-echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"
+echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and 
+Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"
 sleep 2s
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoclean && sudo apt-get autoremove --purge
 
