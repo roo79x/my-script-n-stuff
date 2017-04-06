@@ -15,7 +15,7 @@ Actions=Window;NewTab;Root;Downloads;Pictures;Music;Movies;Public;Disk1;OpenTras
 
 [Desktop Action Window]
 Name=Open a New Window
-Exec=dolphin
+Exec=dolphin %u
 OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action NewTab]
