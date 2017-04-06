@@ -1,2 +1,2 @@
-# my-script-n-stuff
-my-script-n-stuff
+# my-scripts-n-stuff
+my-scripts-n-stuff
