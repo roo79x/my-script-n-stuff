@@ -36,7 +36,8 @@ fi)"
 
 user="${SUDO_USER:-$USER}"
 
-#Post Install
+############ UPDATE UPGRADE AND CLEANUP ###################
+
 echo "${txtbld} ${txtmag} "${greet}" "${user}" ${txtrst}"
 echo "${txtbld} ${txtblu} ${txtsmul}Running Update Script${txtrmul} ${txtrst}"
 echo "  "
@@ -47,6 +48,8 @@ sudo -p "${txtbld} ${txtgrn} Please enter your password: ${txtrst}" whoami 1>/de
 echo "${txtbld} ${txtund} ${txtgrn} Doing an Update, Upgrade and Cleanup... ${txtrst} ${txtcyn} [Cleanliness is next to Godliness you know!!] ${txtrst}"
 sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoclean && sudo apt-get -y autoremove --purge
 echo "   "
+
+########################## REPLACE DESKTOP FILES WITH CUSTOMIZED ONES ########################################
 
 echo "${txtbld} ${txtblu} Modding Chromium browser ${txtrst}"
 sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/chromium-browser.desktop -O /usr/share/applications/chromium-browser.desktop

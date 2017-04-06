@@ -1,6 +1,6 @@
 #!/bin/bash
 #Title: Post install script for KDE-Neon
-#Description: Installs patent encumbered audio and video codecs WITHOUT FLASH!!and other stuff
+#Description: Custom / Personal Post install script for KDE-Neon
 #Author: Roo79x
 #Date: 04 April 2017
 #Usage: bash kde-neon-postinstall-0417.sh
@@ -138,21 +138,32 @@ else
 fi
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications ${txtrst}"
-sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt kdesudo lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0 libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac chromium-codecs-ffmpeg-extra ffmpegthumbs libvlc5 phonon4qt5-backend-vlc phonon-backend-vlc vlc vlc-nox vlc-plugin-samba libvlc5 libphonon4qt5-4 python3-pyqt5 intel-microcode
+sudo apt install p7zip p7zip-full p7zip-rar unzip zip rar unrar rsync ppa-purge realpath hunspell-en-au kate chromium-browser yarock transmission-qt kdesudo lame gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-libav gstreamer1.0-fluendo-mp3 libdvdread4 oxideqt-codecs-extra libavcodec-extra libavcodec-extra57 ffmpeg aac-enc libav-tools mediainfo vorbis-tools opus-tools vpx-tools x264 x265 mkvtoolnix ffmpeg2theora sox libc6-i386 lib32gcc1 lib32stdc++6 gpac chromium-codecs-ffmpeg-extra ffmpegthumbs libvlc5 phonon4qt5-backend-vlc phonon-backend-vlc vlc-plugin-samba libphonon4qt5-4 python3-pyqt5 intel-microcode libav-tools
 echo "   "
 
 echo "${txtbld} ${txtylw} Install Some Extra Applications (--no-install-recommends)${txtrst}"
 sudo apt --no-install-recommends install synaptic
 echo "   "
 
+#ffmulticonverter
 echo "${txtbld} ${txtylw} install ffmulticonverter ${txtrst}"
-wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
-tar -xvzf ffmulticonverter-1.8.0.tar.gz
-cd ffmulticonverter-1.8.0/
-sudo python3 setup.py install
-cd
-sudo rm -rf ffmulticonverter-1.8.0/
-echo "   "
+file="~/ffmulticonverter-1.8.0.tar.gz"
+if [ -e "$file" ]
+then
+    tar -xvzf ffmulticonverter-1.8.0.tar.gz
+    cd ffmulticonverter-1.8.0/
+    sudo python3 setup.py install
+    cd
+    sudo rm -rf ffmulticonverter-1.8.0/
+else
+    wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
+    tar -xvzf ffmulticonverter-1.8.0.tar.gz
+    cd ffmulticonverter-1.8.0/
+    sudo python3 setup.py install
+    cd
+    sudo rm -rf ffmulticonverter-1.8.0/
+    sleep 1s
+fi
 
 echo "${txtbld} ${txtblu} Modding File Manager & Dock!!!............. ${txtrst}"
 mkdir ~/temp
@@ -190,7 +201,7 @@ echo "   "
 echo "${txtbld} ${txtgrn} Adding Some Extra Eye Candy ${txtrst}"
 mkdir ~/temp/Wallpapers
 mkdir ~/temp/userpix
-wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
+#wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
 wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
 tar xzvf ~/temp/Wallpapers.tar.gz -C ~/temp/Wallpapers
 tar xzvf ~/temp/userpix.tar.gz -C ~/temp/userpix
