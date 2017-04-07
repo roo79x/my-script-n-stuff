@@ -156,7 +156,7 @@ then
     cd
     sudo rm -rf ffmulticonverter-1.8.0/
 else
-    wget https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
+    wget -nc https://sourceforge.net/projects/ffmulticonv/files/ffmulticonverter-1.8.0.tar.gz
     tar -xvzf ffmulticonverter-1.8.0.tar.gz
     cd ffmulticonverter-1.8.0/
     sudo python3 setup.py install
@@ -192,7 +192,7 @@ echo "    "
 
 echo "${txtbld} ${txtgrn} Adding Some Custom Scripts ${txtrst}"
 mkdir ~/.bin
-sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/delete-trash.sh -O /usr/local/bin/delete-trash
+sudo wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/delete-trash.sh -O /usr/local/bin/delete-trash
 sudo chmod a+rx /usr/local/bin/delete-trash
 sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/upgcln.sh -O /usr/local/bin/upgcln
 sudo chmod a+rx /usr/local/bin/upgcln
@@ -201,8 +201,8 @@ echo "   "
 echo "${txtbld} ${txtgrn} Adding Some Extra Eye Candy ${txtrst}"
 mkdir ~/temp/Wallpapers
 mkdir ~/temp/userpix
-#wget https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
-wget https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
+wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/temp/Wallpapers.tar.gz
+wget -nc https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/temp/userpix.tar.gz
 tar xzvf ~/temp/Wallpapers.tar.gz -C ~/temp/Wallpapers
 tar xzvf ~/temp/userpix.tar.gz -C ~/temp/userpix
 sudo mv -f ~/temp/Wallpapers/ /usr/share/wallpapers/
@@ -211,9 +211,9 @@ echo " "
 sleep 1s
 
 echo "${txtbld} ${txtgrn} Training Some Dragons ${txtrst}"
-wget https://gist.githubusercontent.com/d0od88/e59f38549d0b990d6fdd2d6d569cd25c/raw/dd4ec483938b4dd50f306c6321984c02935977fc/lattedockinstallation.sh  -O ~/Public/lattedockinstallation.sh
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/useful-stuff.sh -O ~/Public/useful-stuff.sh
-wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/kde-neon-postinstall-0417.sh -O ~/Public/kde-neon-postinstall-0417.sh
+wget -nc https://gist.githubusercontent.com/d0od88/e59f38549d0b990d6fdd2d6d569cd25c/raw/dd4ec483938b4dd50f306c6321984c02935977fc/lattedockinstallation.sh  -O ~/Public/lattedockinstallation.sh
+wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/useful-stuff.sh -O ~/Public/useful-stuff.sh
+wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/kde-neon-postinstall-0417.sh -O ~/Public/kde-neon-postinstall-0417.sh
 echo "   "
 
 echo "${txtbld} ${txtgrn} Feeding the Sharks ${txtrst}"
@@ -222,7 +222,7 @@ mv ~/Videos ~/Movies
 sed -i 's/Videos/Movies/g' ~/.config/user-dirs.dirs
 cp ~/.bashrc ~/.bashrc.old
 sudo xdg-user-dirs-update
-echo 'alias pkexec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY' >> ~/.bashrc
+#echo alias pkexec='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY' >> ~/.bashrc
 
 echo "${txtbld} ${txtcyn} Doing a Final Update, Upgrade and 
 Cleanup...[Cleanliness is next to Godliness you know!!] ${txtrst}"

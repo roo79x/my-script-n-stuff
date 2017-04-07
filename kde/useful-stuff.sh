@@ -61,6 +61,11 @@ widget "whiskermenu-window*" style "whisker-menu-numix-dark-blue-theme"
 
 ####################################KDE#########################################
 
+How To Fix ROOT Apps Theme in KDE Plasma
+Add this line in /etc/environment
+XDG_CURRENT_DESKTOP="KDE"
+
+
 
 if #Ask user whether they want to install Microsoft fonts
   echo -n "Do you want to install Microsoft TrueType Fonts (y/n)? "
