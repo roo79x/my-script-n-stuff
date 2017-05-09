@@ -52,5 +52,6 @@ echo "   "
 #Finished
 echo "    "
 echo "${txtbld} ${txtred} END OF LINE... ${txtrst}"
+notify-send "Update Completed" "Update Script Has Completed. END OF LINE..."
 sleep 1s
 echo "   "
