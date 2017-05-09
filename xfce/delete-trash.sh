@@ -9,4 +9,4 @@ else
   done
 fi
 sleep 2s
-notify-send "Emty Trash" "Trash Has Been Emptied"
+notify-send "Empty Trash" "Trash Has Been Emptied"
