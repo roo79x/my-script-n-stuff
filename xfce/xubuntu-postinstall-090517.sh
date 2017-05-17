@@ -163,7 +163,8 @@ echo "   "
 
 echo "${txtbld} ${txtblu} Modding File Manager & Dock!!!............. ${txtrst}"
 mkdir ~/Public/temp
-cd ~/Public/temp
+mkdir ~/Public/temp/desktop-files
+cd ~/Public/temp/desktop-files/
 sleep 1s
 echo "  "
 
@@ -184,40 +185,40 @@ echo "  "
 
 echo "${txtbld} ${txtblu} Modding Desktop-Webmail ${txtrst}"
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/Desktop-files/desktop-webmail.desktop
-chmod a+rx ~/Public/temp/desktop-webmail.desktop
-sudo cp -r ~/Public/temp/desktop-webmail.desktop /usr/share/applications/
+chmod a+rx ~/Public/temp/desktop-files/desktop-webmail.desktop
+sudo cp -r ~/Public/temp/desktop-files/desktop-webmail.desktop /usr/share/applications/
 echo "    "
 
 echo "${txtbld} ${txtblu} Modding Mousepad ${txtrst}"
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/mousepad.desktop
-chmod a+rx ~/Public/temp/mousepad.desktop
-sudo cp -r ~/Public/temp/mousepad.desktop /usr/share/applications/
+chmod a+rx ~/Public/temp/desktop-files/mousepad.desktop
+sudo cp -r ~/Public/temp/desktop-files/mousepad.desktop /usr/share/applications/
 echo "    "
 
 echo "${txtbld} ${txtblu} Modding Thunar ${txtrst}"
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/thunar/exo-file-manager.desktop
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/thunar/Thunar.desktop
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/thunar/Thunar-folder-handler.desktop
-chmod a+rx ~/Public/temp/exo-file-manager.desktop
-chmod a+rx ~/Public/temp/Thunar-folder-handler.desktop
-chmod a+rx ~/Public/temp/Thunar.desktop
-sudo cp -r ~/Public/temp/exo-file-manager.desktop /usr/share/applications/
-sudo cp -r ~/Public/temp/Thunar-folder-handler.desktop /usr/share/applications/
-sudo cp -r ~/Public/temp/Thunar.desktop /usr/share/applications/
+chmod a+rx ~/Public/temp/desktop-files/exo-file-manager.desktop
+chmod a+rx ~/Public/temp/desktop-files/Thunar-folder-handler.desktop
+chmod a+rx ~/Public/temp/desktop-files/Thunar.desktop
+sudo cp -r ~/Public/temp/desktop-files/exo-file-manager.desktop /usr/share/applications/
+sudo cp -r ~/Public/temp/desktop-files/Thunar-folder-handler.desktop /usr/share/applications/
+sudo cp -r ~/Public/temp/desktop-files/Thunar.desktop /usr/share/applications/
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/thunar/thunar-settings.desktop
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/thunar/uca.xml
-chmod a+rx ~/Public/temp/thunar-settings.desktop
-sudo cp -r ~/Public/temp/thunar-settings.desktop /usr/share/applications/
-sudo cp -r ~/Public/temp/uca.xml ~/.config/Thunar/
+chmod a+rx ~/Public/temp/desktop-files/thunar-settings.desktop
+sudo cp -r ~/Public/temp/desktop-files/thunar-settings.desktop /usr/share/applications/
+sudo cp -r ~/Public/temp/desktop-files/uca.xml ~/.config/Thunar/
 echo "    "
 
 echo "${txtbld} ${txtblu} Modding xfce4-terminal ${txtrst}"
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/xfce4-terminal.desktop
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/xfce/exo-terminal-emulator.desktop
-chmod a+rx ~/Public/temp/exo-terminal-emulator.desktop
-chmod a+rx ~/Public/temp/xfce4-terminal.desktop
-sudo cp -r ~/Public/temp/exo-terminal-emulator.desktop /usr/share/applications/
-sudo cp -r ~/Public/temp/xfce4-terminal.desktop /usr/share/applications/
+chmod a+rx ~/Public/temp/desktop-files/exo-terminal-emulator.desktop
+chmod a+rx ~/Public/temp/desktop-files/xfce4-terminal.desktop
+sudo cp -r ~/Public/temp/desktop-files/exo-terminal-emulator.desktop /usr/share/applications/
+sudo cp -r ~/Public/temp/desktop-files/xfce4-terminal.desktop /usr/share/applications/
 cd
 echo "    "
 
@@ -274,6 +275,7 @@ echo "     "
 
 echo "${txtbld} ${txtgrn} Feeding the Sharks ${txtrst}"
 cd
+wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/linux/general/Desktop-files/google-chrome.desktop ~/Public/temp/desktop-files/google-chrome.desktop
 mv ~/Videos ~/Movies
 sed -i 's/Videos/Movies/g' ~/.config/user-dirs.dirs
 cp ~/.bashrc ~/.bashrc.old
