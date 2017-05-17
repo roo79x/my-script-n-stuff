@@ -167,20 +167,20 @@ cd ~/Public/temp
 sleep 1s
 echo "  "
 
-echo "${txtbld} ${txtblu} Modding browser ${txtrst}"
-read -p "${txtbld} ${txtblu} Will you be using Firefox or Chrome/ium? Y/y for chrome N/n Firefox${txtrst}" -n 1 -r
-echo    # (optional) move to a new line
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/linux/general/Desktop-files/google-chrome.desktop
-sudo chmod a+rx ~/Public/temp/google-chrome.desktop
-sudo cp -r ~/Public/temp/google-chrome.desktop /usr/share/applications/
-else
-wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/Desktop-files/firefox.desktop
-sudo chmod a+rx ~/Public/temp/firefox.desktop
-sudo cp -r ~/Public/temp/firefox.desktop /usr/share/applications/
-fi
-echo "    "
+#echo "${txtbld} ${txtblu} Modding browser ${txtrst}"
+#read -p "${txtbld} ${txtblu} Will you be using Firefox or Chrome/ium? Y/y for chrome N/n Firefox${txtrst}" -n 1 -r
+#echo    # (optional) move to a new line
+#if [[ $REPLY =~ ^[Yy]$ ]]
+#then
+#wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/linux/general/Desktop-files/google-chrome.desktop
+#sudo chmod a+rx ~/Public/temp/google-chrome.desktop
+#sudo cp -r ~/Public/temp/google-chrome.desktop /usr/share/applications/
+#else
+#wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/Desktop-files/firefox.desktop
+#sudo chmod a+rx ~/Public/temp/firefox.desktop
+#sudo cp -r ~/Public/temp/firefox.desktop /usr/share/applications/
+#fi
+#echo "    "
 
 echo "${txtbld} ${txtblu} Modding Desktop-Webmail ${txtrst}"
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Linux/general/Desktop-files/desktop-webmail.desktop
@@ -235,9 +235,6 @@ chmod a+rx extract-mp3.sh
 chmod a+rx rays-orage-gcalsync.sh
 chmod a+rx holidays-ics.sh
 cd
-echo "   "
-
-echo "${txtbld} ${txtgrn} Adding Some Custom Scripts ${txtrst}"
 sudo wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/xfce/delete-trash.sh -O /usr/local/bin/delete-trash
 sudo chmod a+rx /usr/local/bin/delete-trash
 sudo wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/gnome/upgcln.sh -O /usr/local/bin/upgcln
@@ -249,10 +246,8 @@ mkdir ~/Public/temp/Wallpapers
 mkdir ~/Public/temp/userpix
 wget -nc https://www.dropbox.com/s/cusrakmofqlg4jw/Wallpapers.tar.gz -O ~/Public/temp/Wallpapers.tar.gz
 wget -nc https://www.dropbox.com/s/cz8vm5b35zy6lns/userpix.tar.gz -O ~/Public/temp/userpix.tar.gz
-tar xzvf ~/Public/temp/Wallpapers.tar.gz -C ~/Public/temp/Wallpapers
-tar xzvf ~/Public/temp/userpix.tar.gz -C ~/Public/temp/userpix
-sudo mv -f ~/Public/temp/Wallpapers /usr/share/xfce4/backdrops/
-sudo mv -f ~/Public/temp/userpix /usr/share/pixmaps/
+sudo tar xzvf ~/Public/temp/Wallpapers.tar.gz -C /usr/share/xfce4/backdrops/
+sudo tar xzvf ~/Public/temp/userpix.tar.gz -C /usr/share/pixmaps/
 sudo ln /usr/share/icons/elementary-xfce/apps/32/gnome-do.png /usr/share/pixmaps/plank-config.png
 cd
 sleep 1s
@@ -261,7 +256,14 @@ echo " "
 echo "${txtbld} ${txtgrn} Training Some Dragons ${txtrst}"
 wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/useful-stuff.sh -O ~/Public/temp/useful-stuff.sh
 wget -nc https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/xfce/xubuntu-postinstall-090517.sh -O ~/Public/temp/xubuntu-postinstall-090517.sh
+cd /usr/share/applications
+sudo mv exo-mail-reader.desktop exo-mail-reader.bak
+sudo mv exo-web-browser.desktop exo-web-browser.bak
+sudo mv libreoffice-math.desktop libreoffice-math.bak
+sudo mv libreoffice-startcenter.desktop libreoffice-startcenter.bak
+cd
 echo "   "
+
 echo "${txtbld} ${txtcyn} Update icon cache ${txtrst}"
 
 sudo gtk-update-icon-cache /usr/share/icons/elementary-xfce-darkest/
