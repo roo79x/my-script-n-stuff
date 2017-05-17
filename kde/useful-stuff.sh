@@ -22,6 +22,12 @@ ________________________________________________________________________
 gmail to
 https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto
 #############################WIFI-FIX######################################
+Solution: Open
+/etc/NetworkManager/NetworkManager.conf
+
+add lines
+[device]
+wifi.scan-rand-mac-address=0
 #############################XFCE##########################################
 
 
