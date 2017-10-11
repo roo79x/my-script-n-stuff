@@ -14,7 +14,7 @@ X-KDE-AuthorizeAction=shell_access
 Name=Konsole
 GenericName=Terminal
 Comment=Command line access
-Actions=NewWindow;NewTab;Root;
+Actions=NewWindow;NewTab;
 
 [Desktop Action NewWindow]
 Name=Open a New Window
@@ -26,7 +26,3 @@ Name=Open a New Tab
 Exec=konsole --new-tab
 OnlyShowIn=Unity;XFCE;KDE;
 
-[Desktop Action Root]
-Name=Open root terminal
-Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY konsole
-OnlyShowIn=Unity;XFCE;KDE;
