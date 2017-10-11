@@ -2,7 +2,7 @@
 #Title: Update script for KDE-Neon
 #Description: updates system
 #Author: Roo79x
-#Date: 20 March 2017
+#Date: 12 Oct 2017
 #Usage: bash upgcln.sh
 ##############################
 
