@@ -61,15 +61,15 @@ sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/
 sudo chmod a+rx /usr/share/applications/org.kde.dolphin.desktop
 echo "    "
 
-echo "${txtbld} ${txtblu} Modding Kate ${txtrst}"
-sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.kate.desktop -O /usr/share/applications/org.kde.kate.desktop
-sudo chmod a+rx /usr/share/applications/org.kde.kate.desktop
-echo "    "
+#echo "${txtbld} ${txtblu} Modding Kate ${txtrst}"
+#sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.kate.desktop -O /usr/share/applications/org.kde.kate.desktop
+#sudo chmod a+rx /usr/share/applications/org.kde.kate.desktop
+#echo "    "
 
-echo "${txtbld} ${txtblu} Modding Konsole ${txtrst}"
-sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.konsole.desktop -O /usr/share/applications/org.kde.konsole.desktop
-sudo chmod a+rx /usr/share/applications/org.kde.konsole.desktop
-echo "    "
+#echo "${txtbld} ${txtblu} Modding Konsole ${txtrst}"
+#sudo wget https://raw.githubusercontent.com/roo79x/my-script-n-stuff/master/kde/desktop-files/org.kde.konsole.desktop -O /usr/share/applications/org.kde.konsole.desktop
+#sudo chmod a+rx /usr/share/applications/org.kde.konsole.desktop
+#echo "    "
 
 #Finished
 echo "    "
