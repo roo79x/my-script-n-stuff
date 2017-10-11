@@ -46,7 +46,7 @@ sudo -p "${txtbld} ${txtgrn} Please enter your password: ${txtrst}" whoami 1>/de
 
 
 echo "${txtbld} ${txtund} ${txtgrn} Doing an Update, Upgrade and Cleanup... ${txtrst} ${txtcyn} [Cleanliness is next to Godliness you know!!] ${txtrst}"
-sudo apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoclean && sudo apt-get -y autoremove --purge
+sudo apt update && sudo apt upgrade && sudo apt dist-upgrade && sudo apt autoclean && sudo apt autoremove --purge
 echo "   "
 
 ########################## REPLACE DESKTOP FILES WITH CUSTOMIZED ONES ########################################
