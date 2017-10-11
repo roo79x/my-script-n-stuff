@@ -11,7 +11,7 @@ Terminal=false
 MimeType=inode/directory;
 InitialPreference=10
 X-DBUS-ServiceName=org.kde.dolphin
-Actions=Window;NewTab;Root;Downloads;Pictures;Music;Movies;Public;Disk1;OpenTrash;EmptyTrash;
+Actions=Window;NewTab;Downloads;Pictures;Music;Movies;Public;Disk1;OpenTrash;EmptyTrash;
 
 [Desktop Action Window]
 Name=Open a New Window
@@ -21,11 +21,6 @@ OnlyShowIn=Unity;XFCE;KDE;
 [Desktop Action NewTab]
 Name=Open a New Tab
 Exec=dolphin --new-tab
-OnlyShowIn=Unity;XFCE;KDE;
-
-[Desktop Action Root]
-Name=Open As Root
-Exec=pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY dolphin
 OnlyShowIn=Unity;XFCE;KDE;
 
 [Desktop Action Downloads]
