@@ -11,7 +11,7 @@ Terminal=false
 MimeType=inode/directory;
 InitialPreference=10
 X-DBUS-ServiceName=org.kde.dolphin
-Actions=Window;NewTab;Downloads;Pictures;Music;Movies;Public;Disk1;OpenTrash;EmptyTrash;
+Actions=Window;NewTab;Downloads;Pictures;Music;Movies;Public;Mstr4tb1;OpenTrash;EmptyTrash;
 
 [Desktop Action Window]
 Name=Open a New Window
@@ -48,8 +48,8 @@ Name=Public
 Exec=dolphin Public/
 OnlyShowIn=Unity;XFCE;KDE;
 
-[Desktop Action Disk1]
-Name=Open Disk 1
+[Desktop Action Mstr4tb1]
+Name=Open Mstr4tb1
 Exec=dolphin /media/roo79x/mstr4tb1/
 OnlyShowIn=Unity;XFCE;KDE;
 
