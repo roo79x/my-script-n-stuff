@@ -49,8 +49,3 @@ OnlyShowIn=Unity;XFCE;KDE;
 Name=Calendar
 Exec=chromium-browser http://calendar.google.com
 OnlyShowIn=Unity;XFCE;KDE;
-
-#[Desktop Action Plex]
-#Name=Open Plex
-#Exec=chromium-browser http://#
-#OnlyShowIn=Unity;XFCE;KDE;
